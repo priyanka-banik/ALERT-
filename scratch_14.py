@@ -10,6 +10,7 @@ entry=tk.Entry(window)
 entry.pack()
 window.geometry("1020x1020")
 tk.Label(text="Welcome!!")
+#CSV FILE READING AND IMPLEMENTATION
 cssv=open('covid_19_india.csv')
 lines=cssv.readlines()
 def button_click():
@@ -44,6 +45,8 @@ submit_button=Button(window,text="SUBMIT",command=button_click,bg="#E6E914",fg="
 #label2=tk.Label(window,text="#example:Assam,West Bengal,etc..i.",font=("Britannic bold",13,),bg="green")
 
 label1.pack()
+
+#IMAGE
 
 c=Canvas(window,width=220,height=120,bg='#C0C0C0')
 c.pack()
