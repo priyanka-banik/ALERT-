@@ -22,4 +22,3 @@ Today the whole world is affected by the pandemic Covid 19. It is a contagious d
 1. Your system should have Python IDLE .
 2. And your IDLE should have preinstalled packages like *tkinter* which is a package use for developing GUI in python, and *csv* which is use to do operations on csv files.
 
-
