@@ -55,7 +55,7 @@ label1.pack()
 c=Canvas(window,width=220,height=120,bg='#C0C0C0')
 c.pack()
 
-photo=PhotoImage(file=r"C:\Users\acer\Pictures\Screenshots\Screenshot (62).png")
+photo=PhotoImage(file=r"Screenshot (62).png")
 c.create_image(0,0,image=photo,anchor=NW)
 
 '''CAPTION'''
