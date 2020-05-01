@@ -5,7 +5,7 @@ from tkinter import messagebox
 window=tk.Tk()
 window.config(background="black")
 
-Label(window,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",24,"bold"),bg="black",fg="red").pack()
+Label(window,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",45,"bold"),bg="black",fg="red").pack()
 entry=tk.Entry(window,borderwidth=5)
 entry.pack()
 window.title("Covid Alert")
@@ -65,7 +65,17 @@ c.create_image(0,0,image=photo,anchor=NW)
 
 '''CAPTION'''
 
-tk.Label(window,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",40,),bg="black",fg="#E6E914").pack()
+tk.Label(window,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",60,),bg="black",fg="#E6E914").pack()
+
+
+'''EXITING WINDOW'''
+
+def ask1():
+    answer0=messagebox.askyesnocancel("exit","Do You Really Want To Exit?")
+    if answer0==True:
+        window.quit()
+b2=Button(window,text="EXIT",command=ask1,font=("Algerian",30),bg="GREY",fg="black").pack(side=BOTTOM)
+
 
 '''CLOSE WINDOW'''
 
