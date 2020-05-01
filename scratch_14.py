@@ -28,14 +28,14 @@ def button_click():
             txt=lines[i].split(",")
             if t==txt[3]:
                 count=1
-                k=int(k)+int(txt[8])
+                k=int(txt[8])
         if count!=0:
             if k==0:
                 answer1=messagebox.showinfo("Alert",t+" is a safe area with"+str(k)+"cases")
                 if(answer1):
                     window.quit()
             if k<15:
-                answer2=messagebox.showinfo("Alert!!",t+" is under moderate danger.\nYou are in orange zone.\nThere are total"+str(k)+"cases.")
+                answer2=messagebox.showinfo("Alert",t+" is under moderate danger.\nYou are in orange zone.\nThere are total"+str(k)+"cases.")
                 if (answer2):
                     window.quit()
 
@@ -43,7 +43,8 @@ def button_click():
                 answer3=messagebox.showinfo("Alert",t+" is having exploding no. of Covid-19 cases.\nYou are in red zone.\nThere are total "+str(k)+"cases.")
                 if (answer3):
                     window.quit()
-
+        if count==0:
+            answer4=messagebox.showinfo("Alert","OOPS!!\n This location not found.")
 label1=tk.Label(window,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...",fg="white",font=("Britannic bold",13,"bold"),bg="black")
 submit_button=Button(window,text="SUBMIT",command=button_click,bg="#E6E914",fg="black").pack()
 
