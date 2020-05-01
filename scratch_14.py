@@ -1,5 +1,3 @@
-k=0
-count=0
 import tkinter as tk
 from tkinter import *
 import csv
@@ -8,10 +6,12 @@ window=tk.Tk()
 window.config(background="black")
 
 Label(window,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",24,"bold"),bg="black",fg="red").pack()
-entry=tk.Entry(window)
+entry=tk.Entry(window,borderwidth=5)
 entry.pack()
+window.title("Covid Alert")
 window.geometry("1020x1020")
 tk.Label(text="Welcome!!")
+window.iconbitmap('icon.ico')
 
 
 '''CSV FILE READING AND IMPLEMENTATION'''
@@ -37,7 +37,7 @@ def button_click():
                 if(answer1):
                     window.quit()
             if k<15:
-                answer2=messagebox.showinfo("Alert",t+" is under moderate danger.\nYou are in orange zone.\nThere are total"+str(k)+"cases.")
+                answer2=messagebox.showinfo("Alert",t+" is under moderate danger.\nYou are in orange zone.\nThere are total "+str(k)+"cases.")
                 if (answer2):
                     window.quit()
 
@@ -47,6 +47,8 @@ def button_click():
                     window.quit()
         if count==0:
             answer4=messagebox.showinfo("Alert","OOPS!!\n This location not found.")
+            if(answer4):
+                window.quit()
 label1=tk.Label(window,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...",fg="white",font=("Britannic bold",13,"bold"),bg="black")
 submit_button=Button(window,text="SUBMIT",command=button_click,bg="#E6E914",fg="black").pack()
 
