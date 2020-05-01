@@ -42,7 +42,7 @@ def button_click():
                     window.quit()
 
             if k>15:
-                answer3=messagebox.showinfo("Alert",t+" is having exploding no. of Covid-19 cases.\nYou are in red zone.\nThere are total "+str(k)+"cases.")
+                answer3=messagebox.showwarning("Alert",t+" is having exploding no. of Covid-19 cases.\nYou are in red zone.\nThere are total "+str(k)+"cases.")
                 if (answer3):
                     window.quit()
         if count==0:
