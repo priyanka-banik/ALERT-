@@ -12,11 +12,11 @@ Today the whole world is affected by the pandemic Covid 19. It is a contagious d
 2. Then extract the files from the zip file.
 3. Then open the **Project.py** file it will lead you to our GUI.
 4. Then enter the state you are going to visit and click **submit** to see the number of covid 19 cases and it is under which zone.
-5.Further,to know about symptoms and precautions for COVID-19 ,we can click the symptoms's and precaution's buttons.
+5. Further,to know about symptoms and precautions for COVID-19 ,we can click the symptoms's and precaution's buttons.
 
 
 # HOW THE GUI LOOKS
-(Screenshot (74).png)
+![](Screenshot (74).png)
 
 # DEPENDENCIES
 
