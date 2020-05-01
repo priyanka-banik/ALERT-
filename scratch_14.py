@@ -70,13 +70,26 @@ tk.Label(window,text="Stay at home,a wise man said.\n Vijay did'nt obey this and
 
 '''EXITING WINDOW'''
 
+
+
+'''CLOSE WINDOW'''
+def Button1():
+	answer5=messagebox.showinfo("Symptoms","Common symptoms:\n->fever.\n->tiredness.\n->dry cough.\n**Some people may experience:\n->aches and pains.\n->nasal congestion.\n->runny nose.\n->sore throat.\n->diarrhoea.\nOn average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.People with mild symptoms who are otherwise healthy should isolate themselves. Seek medical attention if you have a fever, a cough, and difficulty breathing. Call ahead.")
+	if(answer5):
+		window.quit
+tk.Label(window,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",40,),bg="black",fg="#E6E914").pack()
+tk.Label(window,text="",bg="black").pack()
+Button1=Button(window,text="Symptoms",command=Button1)
+Button1.pack()
+def Button2():
+	answer6=messagebox.showinfo("Precautions","*Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing.\n* If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. Always wash hands with soap and water if hands are visibly dirty.\n* Avoid touching your eyes, nose, and mouth with unwashed hands.Avoid close contact with people who are sick.\n* Stay home when you are sick.\n ")
+tk.Label(window,text="",bg="black").pack()
+Button2=Button(window,text="Precautions",command=Button2)
+Button2.pack()
 def ask1():
     answer0=messagebox.askyesnocancel("exit","Do You Really Want To Exit?")
     if answer0==True:
         window.quit()
-b2=Button(window,text="EXIT",command=ask1,font=("Algerian",30),bg="GREY",fg="black").pack(side=BOTTOM)
-
-
-'''CLOSE WINDOW'''
+b2=Button(window,text="EXIT",command=ask1,font=("Algerian",20),bg="GREY",fg="black").pack(side=BOTTOM)
 
 window.mainloop()
