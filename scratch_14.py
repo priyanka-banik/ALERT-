@@ -33,11 +33,11 @@ def button_click():
                 k=int(txt[8])
         if count!=0:
             if k==0:
-                messagebox.showinfo("Alert",t+" is a safe area with"+str(k)+"cases")
+                messagebox.showinfo("Alert",t+" is a safe area with"+str(k)+" cases")
             if k<15:
-                messagebox.showinfo("Alert",t+" is under moderate danger.\n\nYou are in orange zone.\n\nThere are total "+str(k)+"cases.")
+                messagebox.showinfo("Alert",t+" is under moderate danger.\n\nYou are in orange zone.\n\nThere are total "+str(k)+" cases.")
             if k>15:
-                messagebox.showinfo("Alert",t+" is having exploding no. of Covid-19 cases.\n\nYou are in red zone.\n\nThere are total "+str(k)+"cases.")
+                messagebox.showinfo("Alert",t+" is having exploding no. of Covid-19 cases.\n\nYou are in red zone.\n\nThere are total "+str(k)+" cases.")
         if count==0:
             messagebox.showinfo("Alert","OOPS!!\n This location not found.")
 label1=tk.Label(window,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...\n",fg="white",font=("Britannic bold",13,"bold"),bg="black")
