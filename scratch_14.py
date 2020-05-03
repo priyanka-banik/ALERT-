@@ -7,12 +7,12 @@ from tkinter import messagebox
 window=tk.Tk()
 window.config(background="BLACK")
 
-sidebar = LabelFrame(window, width=100, bg='black', height=500, relief='sunken', borderwidth=2)
+sidebar = LabelFrame(window, width=150, bg='#151515', height=500, relief='sunken', borderwidth=2)
 sidebar.pack(expand=False, fill='y', side='left', anchor='nw')
 mainFrame=LabelFrame(window,bg='black', width=500, height=500)
 mainFrame.pack(expand=True,fill='both',side='right')
 
-Label(mainFrame,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",45,"bold"),bg="black",fg="red").pack()
+Label(mainFrame,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",45,"bold"),bg="black",fg="RED").pack()
 entry=tk.Entry(mainFrame,borderwidth=5)
 entry.pack()
 window.title("Covid Alert")
@@ -64,7 +64,7 @@ c.create_image(0,0,image=photo,anchor=NW)
 
 '''CAPTION'''
 
-tk.Label(mainFrame,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",50,),bg="black",fg="#E6E914").pack()
+tk.Label(mainFrame,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",45,),bg="black",fg="YELLOW").pack()
 
 
 '''EXITING WINDOW'''
@@ -76,24 +76,24 @@ url='https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html'
 def Button1():
 	webbrowser.open_new(url)
 Button1=Button(sidebar,text="SYMPTOMS",font=("Algerian",15),bg="#1B2631",fg="WHITE",command=Button1)
-Button1.pack(pady=20)
+Button1.pack(pady=60)
 
 url1='https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html'
 def Button2():
 	webbrowser.open_new(url1)
-Button2=Button(sidebar,text="PRECAUTIONS",font=("Algerian",15),bg="#1B2631",fg="WHITE",command=Button2)
-Button2.pack(pady=20)
+Button2=Button(sidebar,text="PRECAUTIONS",font=("Algerian",17),bg="#1B2631",fg="WHITE",command=Button2)
+Button2.pack(pady=60)
 url2='https://www.worldometers.info/coronavirus/#countries'
 def Button3():
 	webbrowser.open_new(url2)
-Button3=Button(sidebar,text="Covid-19 Updated Data",font=("Algerian",15),bg="#1B2631",fg="WHITE",command=Button3)
-Button3.pack(pady=20)
+Button3=Button(sidebar,text="Covid-19 Updated Data",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button3)
+Button3.pack(pady=60)
 
 
 def ask1():
     answer0=messagebox.askyesnocancel("Exit","Do You Really Want To Exit?")
     if answer0==True:
         window.quit()
-b2=Button(sidebar,text="EXIT",command=ask1,font=("Algerian",20),bg="#1B2631",fg="WHITE").pack(pady=20,side=BOTTOM)
+b2=Button(mainFrame,text="EXIT",command=ask1,font=("Algerian",20),bg="#1B2631",fg="WHITE").pack(side=RIGHT)
 
 window.mainloop()
