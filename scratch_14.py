@@ -46,7 +46,7 @@ def button_click():
                 messagebox.showinfo("Alert",t+" is having exploding no. of Covid-19 cases.\n\nYou are in red zone.\n\nThere are total "+str(k)+" cases.")
         if count==0:
             messagebox.showinfo("Alert","OOPS!!\n This location not found.")
-label1=tk.Label(mainFrame,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...\n",fg="white",font=("Britannic bold",13,"bold"),bg="black")
+label1=tk.Label(mainFrame,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...\n",fg="white",font=("Britannic bold",13),bg="black")
 
 Button(window,bg="black",border=0).pack()
 submit_button=Button(mainFrame,text="SUBMIT",command=button_click,bg="#1B2631",font=("Algerian",10),fg="WHITE").pack()
