@@ -64,16 +64,20 @@ tk.Label(window,text="Stay at home,a wise man said.\n Vijay did'nt obey this and
 
 
 '''CLOSE WINDOW'''
+url='https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html'
 def Button1():
-	messagebox.showinfo("Symptoms","Common symptoms:\n\n->fever.\n->tiredness.\n->dry cough.\n\n***Some people may experience:\n\n->aches and pains.\n->nasal congestion.\n->runny nose.\n->sore throat.\n->diarrhoea.\n\nOn average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.People with mild symptoms who are otherwise healthy should isolate themselves. Seek medical attention if you have a fever, a cough, and difficulty breathing. Call ahead.")
-    
+	webbrowser.open_new(url)
 Button1=Button(window,text="SYMPTOMS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button1)
 Button1.pack(side=LEFT)
+url1='https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html'
 def Button2():
-	messagebox.showinfo("Precautions","*Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing.\n\n* If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. Always wash hands with soap and water if hands are visibly dirty.\n\n* Avoid touching your eyes, nose, and mouth with unwashed hands.Avoid close contact with people who are sick.\n\n* Stay home when you are sick.\n \n")
-    
+	webbrowser.open_new(url1)
 Button2=Button(window,text="PRECAUTIONS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button2)
 Button2.pack(side=LEFT)
+url2='https://www.worldometers.info/coronavirus/#countries'
+def Button3():
+	webbrowser.open_new(url2)
+
 def ask1():
     answer0=messagebox.askyesnocancel("Exit","Do You Really Want To Exit?")
     if answer0==True:
