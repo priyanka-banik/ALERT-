@@ -6,13 +6,17 @@ import webbrowser
 from tkinter import messagebox
 window=tk.Tk()
 window.config(background="BLACK")
+window.config(background="black")
+sidebar = LabelFrame(window, width=200, bg='#2c3e50', height=500, relief='sunken', borderwidth=2)
+sidebar.pack(expand=False, fill='y', side='left', anchor='nw')
+mainFrame=LabelFrame(window,bg='black', width=500, height=500)
+mainFrame.pack(expand=True,fill='both',side='right')
 
-Label(window,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",45,"bold"),bg="black",fg="red").pack()
-entry=tk.Entry(window,borderwidth=5)
+Label(mainFrame,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",45,"bold"),bg="black",fg="red").pack()
+entry=tk.Entry(mainFrame,borderwidth=5)
 entry.pack()
 window.title("Covid Alert")
 window.geometry("1020x1020")
-tk.Label(text="Welcome!!")
 window.iconbitmap('icon.ico')
 
 
@@ -42,15 +46,15 @@ def button_click():
                 messagebox.showinfo("Alert",t+" is having exploding no. of Covid-19 cases.\n\nYou are in red zone.\n\nThere are total "+str(k)+" cases.")
         if count==0:
             messagebox.showinfo("Alert","OOPS!!\n This location not found.")
-label1=tk.Label(window,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...\n",fg="white",font=("Britannic bold",13,"bold"),bg="black")
-submit_button=Button(window,text="SUBMIT",command=button_click,bg="#E6E914",fg="black").pack()
+label1=tk.Label(mainFrame,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...\n",fg="white",font=("Britannic bold",13,"bold"),bg="black")
+submit_button=Button(mainFrame,text="SUBMIT",command=button_click,bg="#E6E914",fg="black").pack()
 
 
 label1.pack()
 
 '''IMAGE'''
 
-c=Canvas(window,width=220,height=120,bg='#C0C0C0')
+c=Canvas(mainFrame,width=220,height=120,bg='#C0C0C0')
 c.pack()
 
 photo=PhotoImage(file=r"Screenshot (62).png")
@@ -58,7 +62,7 @@ c.create_image(0,0,image=photo,anchor=NW)
 
 '''CAPTION'''
 
-tk.Label(window,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",60,),bg="black",fg="#E6E914").pack()
+tk.Label(mainFrame,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",60,),bg="black",fg="#E6E914").pack()
 
 
 '''EXITING WINDOW'''
@@ -69,30 +73,25 @@ tk.Label(window,text="Stay at home,a wise man said.\n Vijay did'nt obey this and
 url='https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html'
 def Button1():
 	webbrowser.open_new(url)
-Button1=Button(window,text="SYMPTOMS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button1)
-Button1.pack(side=LEFT)
+Button1=Button(sidebar,text="SYMPTOMS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button1)
+Button1.pack(pady=20)
 
 url1='https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html'
 def Button2():
 	webbrowser.open_new(url1)
-Button2=Button(window,text="PRECAUTIONS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button2)
-Button2.pack(side=LEFT)
-
-#url2='https://www.worldometers.info/coronavirus/#countries'
-#def Button3():
-#	webbrowser.open_new(url2)
- #   Button3.pack()
+Button2=Button(sidebar,text="PRECAUTIONS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button2)
+Button2.pack(pady=20)
 url2='https://www.worldometers.info/coronavirus/#countries'
 def Button3():
 	webbrowser.open_new(url2)
-Button3=Button(window,text="Covid-19 Updated Data",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button3)
-Button3.pack(side=LEFT)
+Button3=Button(sidebar,text="Covid-19 Updated Data",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button3)
+Button3.pack(pady=20)
 
 
 def ask1():
     answer0=messagebox.askyesnocancel("Exit","Do You Really Want To Exit?")
     if answer0==True:
         window.quit()
-b2=Button(window,text="EXIT",command=ask1,font=("Algerian",20),bg="#1B2631",fg="WHITE").pack(side=LEFT)
+b2=Button(sidebar,text="EXIT",command=ask1,font=("Algerian",20),bg="#1B2631",fg="WHITE").pack(pady=20)
 
 window.mainloop()
