@@ -7,7 +7,7 @@ from tkinter import messagebox
 window=tk.Tk()
 window.config(background="BLACK")
 
-sidebar = LabelFrame(window, width=150, bg='#151515', height=500, relief='sunken', borderwidth=2)
+sidebar = LabelFrame(window, width=150, bg='#151515', height=500, relief='sunken')
 sidebar.pack(expand=False, fill='y', side='left', anchor='nw')
 mainFrame=LabelFrame(window,bg='black', width=500, height=500)
 mainFrame.pack(expand=True,fill='both',side='right')
