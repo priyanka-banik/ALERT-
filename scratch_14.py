@@ -13,7 +13,7 @@ mainFrame=LabelFrame(window,bg='black', width=500, height=500)
 mainFrame.pack(expand=True,fill='both',side='right')
 
 Label(mainFrame,text="COVID-19 HOTSPOT AREA ALERT",font=("Algerian",45,"bold"),bg="black",fg="RED").pack()
-entry=tk.Entry(mainFrame,borderwidth=5)
+entry=tk.Entry(mainFrame,borderwidth=2)
 entry.pack()
 window.title("Covid Alert")
 window.geometry("1300x1300")
