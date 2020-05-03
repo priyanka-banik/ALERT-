@@ -85,7 +85,7 @@ Button2.pack(side=LEFT)
 url2='https://www.worldometers.info/coronavirus/#countries'
 def Button3():
 	webbrowser.open_new(url2)
-Button3=Button(window,text="Covid-19 Updated Data",font=("Algerian",10),bg="#1B2631",fg="WHITE",command=Button3)
+Button3=Button(window,text="Covid-19 Updated Data",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button3)
 Button3.pack(side=LEFT)
 
 
