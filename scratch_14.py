@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import *
 import csv
+import webbrowser
 from tkinter import messagebox
 window=tk.Tk()
 window.config(background="BLACK")
@@ -69,14 +70,16 @@ def Button1():
 	webbrowser.open_new(url)
 Button1=Button(window,text="SYMPTOMS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button1)
 Button1.pack(side=LEFT)
+
 url1='https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html'
 def Button2():
 	webbrowser.open_new(url1)
 Button2=Button(window,text="PRECAUTIONS",font=("Algerian",20),bg="#1B2631",fg="WHITE",command=Button2)
 Button2.pack(side=LEFT)
-url2='https://www.worldometers.info/coronavirus/#countries'
-def Button3():
-	webbrowser.open_new(url2)
+#url2='https://www.worldometers.info/coronavirus/#countries'
+#def Button3():
+#	webbrowser.open_new(url2)
+ #   Button3.pack()
 
 def ask1():
     answer0=messagebox.askyesnocancel("Exit","Do You Really Want To Exit?")
