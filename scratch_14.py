@@ -94,6 +94,6 @@ def ask1():
     answer0=messagebox.askyesnocancel("Exit","Do You Really Want To Exit?")
     if answer0==True:
         window.quit()
-b2=Button(mainFrame,text="EXIT",command=ask1,font=("Algerian",20),bg="#1B2631",fg="WHITE").pack(side=RIGHT)
+b2=Button(sidebar,text="EXIT",command=ask1,font=("Algerian",20),bg="#1B2631",fg="WHITE").pack(side=BOTTOM)
 
 window.mainloop()
