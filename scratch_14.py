@@ -1,4 +1,5 @@
 import tkinter as tk
+import webbrowser
 from tkinter import *
 import csv
 from tkinter import messagebox
@@ -77,6 +78,8 @@ Button2.pack(side=LEFT)
 url2='https://www.worldometers.info/coronavirus/#countries'
 def Button3():
 	webbrowser.open_new(url2)
+Button3=Button(window,text="Covid-19 Updated Data",font=("Algerian",10),bg="#1B2631",fg="WHITE",command=Button3)
+Button3.pack(side=LEFT)
 
 def ask1():
     answer0=messagebox.askyesnocancel("Exit","Do You Really Want To Exit?")
