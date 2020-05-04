@@ -12,7 +12,7 @@ sidebar.pack(expand=False, fill='y', side='left', anchor='nw')
 mainFrame=LabelFrame(window,bg='black', width=500, height=500)
 mainFrame.pack(expand=True,fill='both',side='right')
 
-Label(mainFrame,text="COVID-19 HOTSPOT AREA ALERT",font=("Times",45),bg="black",fg="RED").pack()
+Label(mainFrame,text="COVID-19 HOTSPOT AREA ALERT",font=("Times",45),bg="black",fg="#B22222").pack()
 entry=tk.Entry(mainFrame,borderwidth=2)
 entry.pack()
 window.title("Covid Alert")
@@ -46,10 +46,10 @@ def button_click():
                 messagebox.showinfo("Alert",t+" is having exploding no. of Covid-19 cases.\n\nYou are in red zone.\n\nThere are total "+str(k)+" cases.")
         if count==0:
             messagebox.showinfo("Alert","OOPS!!\n This location not found.")
-label1=tk.Label(mainFrame,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...\n",fg="white",font=("Britannic bold",13),bg="black")
+label1=tk.Label(mainFrame,text="Enter The State You Want To Check In\n#example:Assam,West Bengal,etc...\n",fg="white",font=("Sabon",13),bg="black")
 
 Button(window,bg="black",border=0).pack()
-submit_button=Button(mainFrame,text="SUBMIT",command=button_click,bg="#1B2631",font=("Algerian",10),fg="WHITE").pack()
+submit_button=Button(mainFrame,text="SUBMIT",command=button_click,bg="#1B2631",font=("Times",14),fg="WHITE").pack()
 
 
 label1.pack()
@@ -64,7 +64,7 @@ c.create_image(0,0,image=photo,anchor=NW)
 
 '''CAPTION'''
 
-tk.Label(mainFrame,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",45,),bg="black",fg="YELLOW").pack()
+tk.Label(mainFrame,text="Stay at home,a wise man said.\n Vijay did'nt obey this and went out like a nicompoop.\nHe is dead now.\nDon't be like Vijay.",font=("chiller",45,),bg="black",fg="#C0C0C0").pack()
 
 
 '''EXITING WINDOW'''
@@ -86,7 +86,7 @@ Button2.pack(pady=60)
 url2='https://www.worldometers.info/coronavirus/#countries'
 def Button3():
 	webbrowser.open_new(url2)
-Button3=Button(sidebar,text="Covid-19 Updated Data",font=("Times",15),bg="#1B2631",fg="WHITE",command=Button3)
+Button3=Button(sidebar,text="Covid-19\nUpdated Data",font=("Times",15),bg="#1B2631",fg="WHITE",command=Button3)
 Button3.pack(pady=60)
 
 
