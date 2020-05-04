@@ -12,7 +12,7 @@ sidebar.pack(expand=False, fill='y', side='left', anchor='nw')
 mainFrame=LabelFrame(window,bg='black', width=500, height=500)
 mainFrame.pack(expand=True,fill='both',side='right')
 
-Label(mainFrame,text="COVID-19 HOTSPOT AREA ALERT",font=("Times",45),bg="black",fg="#B22222").pack()
+Label(mainFrame,text="COVID-19 HOTSPOT ALERT",font=("Times",45),bg="black",fg="#B22222").pack()
 entry=tk.Entry(mainFrame,borderwidth=2)
 entry.pack()
 window.title("Covid Alert")
